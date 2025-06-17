@@ -98,6 +98,12 @@
 }
  #keyboard {
 	 position: fixed;
+	 background-color: #f0f0f0;
+	 border: 2px solid #003300;
+	 padding: 10px;
+	 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	 border-radius: 5px;
+	 z-index: 1000;
 }
  #keyboard > div > input {
 	 width: 36px;
@@ -106,5 +112,156 @@
 	 font-weight: bold;
 	 font-size: large;
 	 margin-left: -6px;
+}
+ @media screen and (max-width: 1024px) {
+	 .wrapper {
+		 grid-template-columns: 1.5fr 6.5fr 2fr;
+		 grid-template-rows: 10vh 8vh 72vh 5vh;
+	}
+	 #title {
+		 font-size: x-large;
+	}
+	 #main-window-title {
+		 font-size: medium;
+		 padding: 10px;
+	}
+	 button {
+		 font-size: medium !important;
+	}
+}
+ @media screen and (max-width: 768px) {
+	 .wrapper {
+		 grid-template-columns: 1fr;
+		 grid-template-rows: auto auto auto 1fr auto;
+		 gap: 0.3rem;
+	}
+	 .wrapper > div {
+		 padding: 0.5em;
+	}
+	 #logo {
+		 grid-column: 1;
+		 grid-row: 1;
+	}
+	 #title {
+		 grid-column: 1;
+		 grid-row: 1;
+		 font-size: large;
+		 padding-left: 60px;
+	}
+	 #user {
+		 display: none;
+	}
+	 #exercices-nav {
+		 grid-column: 1;
+		 grid-row: 2;
+		 max-height: 150px;
+		 overflow-y: auto;
+	}
+	 #main-window-title {
+		 grid-column: 1;
+		 grid-row: 3;
+		 flex-direction: column;
+		 gap: 10px;
+		 padding: 10px;
+	}
+	 #main-window-title > div {
+		 width: 100%;
+	}
+	 #main-window-body {
+		 grid-column: 1;
+		 grid-row: 4;
+		 min-height: 400px;
+		 padding: 10px;
+	}
+	 #stats {
+		 grid-column: 1;
+		 grid-row: 5;
+	}
+	 .footer {
+		 grid-column: 1;
+		 font-size: medium;
+	}
+	 #myFooter {
+		 grid-row: 6;
+		 font-size: small !important;
+	}
+	 #footer-cat-info {
+		 grid-row: 7;
+	}
+	 .buttons-panel {
+		 display: flex;
+		 justify-content: center;
+		 flex-wrap: wrap;
+	}
+	 button {
+		 font-size: small !important;
+		 padding: 8px 12px;
+	}
+	 #myExercice p {
+		 display: flex;
+		 flex-direction: column;
+		 margin-bottom: 20px;
+	}
+	 #myExercice input[type="text"] {
+		 width: 100% !important;
+		 min-width: unset !important;
+		 margin: 5px 0;
+		 font-size: 14pt !important;
+		 box-sizing: border-box;
+	}
+	 #keyboard {
+		 position: fixed !important;
+		 bottom: 10px !important;
+		 left: 10px !important;
+		 right: 10px !important;
+		 top: auto !important;
+		 max-width: none;
+	}
+	 #keyboard > div {
+		 display: flex;
+		 justify-content: center;
+		 flex-wrap: wrap;
+	}
+	 #keyboard > div > input {
+		 width: 32px;
+		 height: 32px;
+		 font-size: medium;
+		 margin: 2px;
+	}
+}
+ @media screen and (max-width: 480px) {
+	 #title {
+		 font-size: medium;
+		 padding-left: 50px;
+	}
+	 #logo img {
+		 width: 25px;
+	}
+	 #exercice-wrapper {
+		 font-size: 12pt;
+	}
+	 #main-window-title > div p {
+		 font-size: small;
+	}
+	 button {
+		 font-size: x-small !important;
+		 padding: 6px 10px;
+	}
+	 #keyboard > div > input {
+		 width: 28px;
+		 height: 28px;
+		 font-size: small;
+	}
+	 .footer {
+		 font-size: small;
+		 padding: 0.3em;
+	}
+}
+ #result-wrapper {
+	 padding: 10px;
+	 margin-top: 20px;
+	 background-color: rgba(255,255,255,0.8);
+	 border-radius: 5px;
+	 text-align: center;
 }
  
